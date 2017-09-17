@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7CFED7C51F66BC9200B70E8E"
-               BuildableName = "TestSingleViewAppProject.app"
-               BlueprintName = "TestSingleViewAppProject"
-               ReferencedContainer = "container:TestSingleViewAppProject.xcodeproj">
+               BlueprintIdentifier = "C70A0F8C1F66BBEC000AF93E"
+               BuildableName = "CW_September_11.app"
+               BlueprintName = "CW_September_11"
+               ReferencedContainer = "container:CW_September_11.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,34 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C70A0FA01F66BBEC000AF93E"
+               BuildableName = "CW_September_11Tests.xctest"
+               BlueprintName = "CW_September_11Tests"
+               ReferencedContainer = "container:CW_September_11.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C70A0FAB1F66BBEC000AF93E"
+               BuildableName = "CW_September_11UITests.xctest"
+               BlueprintName = "CW_September_11UITests"
+               ReferencedContainer = "container:CW_September_11.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7CFED7C51F66BC9200B70E8E"
-            BuildableName = "TestSingleViewAppProject.app"
-            BlueprintName = "TestSingleViewAppProject"
-            ReferencedContainer = "container:TestSingleViewAppProject.xcodeproj">
+            BlueprintIdentifier = "C70A0F8C1F66BBEC000AF93E"
+            BuildableName = "CW_September_11.app"
+            BlueprintName = "CW_September_11"
+            ReferencedContainer = "container:CW_September_11.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7CFED7C51F66BC9200B70E8E"
-            BuildableName = "TestSingleViewAppProject.app"
-            BlueprintName = "TestSingleViewAppProject"
-            ReferencedContainer = "container:TestSingleViewAppProject.xcodeproj">
+            BlueprintIdentifier = "C70A0F8C1F66BBEC000AF93E"
+            BuildableName = "CW_September_11.app"
+            BlueprintName = "CW_September_11"
+            ReferencedContainer = "container:CW_September_11.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7CFED7C51F66BC9200B70E8E"
-            BuildableName = "TestSingleViewAppProject.app"
-            BlueprintName = "TestSingleViewAppProject"
-            ReferencedContainer = "container:TestSingleViewAppProject.xcodeproj">
+            BlueprintIdentifier = "C70A0F8C1F66BBEC000AF93E"
+            BuildableName = "CW_September_11.app"
+            BlueprintName = "CW_September_11"
+            ReferencedContainer = "container:CW_September_11.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

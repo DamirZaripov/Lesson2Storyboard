@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TestSingleViewAppProject
+//  CW_September_11
 //
-//  Created by Ildar Zalyalov on 11.09.17.
-//  Copyright © 2017 ru.itisIosLab. All rights reserved.
+//  Created by Дамир Зарипов on 11.09.17.
+//  Copyright © 2017 Дамир Зарипов. All rights reserved.
 //
 
 import UIKit
