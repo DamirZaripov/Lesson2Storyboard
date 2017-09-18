@@ -8,6 +8,20 @@
 
 import UIKit
 
+let backgroundImage: UIImage = #imageLiteral(resourceName: "background-navigation-image")
+let sidebarImage: UIImage = #imageLiteral(resourceName: "sidebar-image")
+let pointsImage: UIImage = #imageLiteral(resourceName: "points-image")
+let borderWidth: CGFloat = 1
+let borderColour = UIColor.init(red:222/255.0, green:225/255.0, blue:227/255.0, alpha: 1.0).cgColor
+let buttonWidth = 35
+let buttonHeight = 35
+let years = "   years"
+let randomFriends = arc4random_uniform(100)
+let randomFollowers = arc4random_uniform(100)
+let randomGroups = arc4random_uniform(100)
+let randomPhotos = arc4random_uniform(100)
+let randomVideos = arc4random_uniform(100)
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var avatarkaImage: UIImageView!
@@ -31,53 +45,52 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         changeBackgroundNavigation()
-        changeBorder(view: informationScrollView)
-        changeBorder(view: entryButton)
-        changeBorder(view: photoButton)
-        changeBorder(view: geoButton)
+        changeBorder(for: informationScrollView)
+        changeBorder(for: entryButton)
+        changeBorder(for: photoButton)
+        changeBorder(for: geoButton)
         setupNavigationBarItems()
         randomUserInfo()
         randomScrollInfo()
-        
     }
 	
     func changeBackgroundNavigation() {
-        let backgroundImage : UIImage = #imageLiteral(resourceName: "background-navigation-image")
         navigationController?.navigationBar.setBackgroundImage(backgroundImage, for: .default)
     }
+    
     // round image function
     override func viewDidLayoutSubviews() {
         avatarkaImage.layer.cornerRadius = avatarkaImage.frame.size.width/2
         avatarkaImage.clipsToBounds = true
     }
     
-    func changeBorder(view: UIView) {
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.init(red:222/255.0, green:225/255.0, blue:227/255.0, alpha: 1.0).cgColor
+    func changeBorder(for view: UIView) {
+        view.layer.borderWidth = borderWidth
+        view.layer.borderColor = borderColour
     }
     
     func setupNavigationBarItems() {
         let sidebarButton = UIButton(type: .system)
-        sidebarButton.setImage(#imageLiteral(resourceName: "sidebar-image"), for: .normal)
-        sidebarButton.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+        sidebarButton.setImage(sidebarImage, for: .normal)
+        sidebarButton.frame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
         sidebarButton.contentMode = .scaleAspectFit
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sidebarButton)
         
         let pointsButton = UIButton(type: .system)
-        pointsButton.setImage(#imageLiteral(resourceName: "points-image"), for: .normal)
-        pointsButton.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+        pointsButton.setImage(pointsImage, for: .normal)
+        pointsButton.frame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
         pointsButton.contentMode = .scaleAspectFit
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: pointsButton)
     }
     
     func randomUserInfo() {
-        let user : UserRandom = UserRandom()
+        let user: UserRandom = UserRandom()
         user.createUser()
         title = user.name
         nameLable.text = user.name
         surnameLable.text = user.surname
         let stringAge = String (user.age)
-        ageLable.text = stringAge + "   years"
+        ageLable.text = stringAge + years
         cityLable.text = user.city
     }
     
@@ -85,19 +98,19 @@ class ViewController: UIViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = NSTextAlignment.center
         let color = UIColor.black
-        let friends = NSAttributedString(string: "\(arc4random_uniform(100)) \nfriends",
+        let friends = NSAttributedString(string: "\(randomFriends) \nfriends",
             attributes: [NSForegroundColorAttributeName : color, NSParagraphStyleAttributeName:paragraphStyle])
         friendsButton.setAttributedTitle(friends, for: .normal)
-        let followers = NSAttributedString(string: "\(arc4random_uniform(100)) \nfollowers",
+        let followers = NSAttributedString(string: "\(randomFollowers) \nfollowers",
             attributes: [NSForegroundColorAttributeName : color, NSParagraphStyleAttributeName:paragraphStyle ])
         followersButton.setAttributedTitle(followers, for: .normal)
-        let groups = NSAttributedString(string: "\(arc4random_uniform(100)) \ngroups",
+        let groups = NSAttributedString(string: "\(randomGroups) \ngroups",
             attributes: [NSForegroundColorAttributeName : color, NSParagraphStyleAttributeName:paragraphStyle])
         groupsButton.setAttributedTitle(groups, for: .normal)
-        let photos = NSAttributedString(string: "\(arc4random_uniform(100)) \nphotos",
+        let photos = NSAttributedString(string: "\(randomPhotos) \nphotos",
             attributes: [NSForegroundColorAttributeName : color, NSParagraphStyleAttributeName:paragraphStyle])
         photosButton.setAttributedTitle(photos, for: .normal)
-        let videos = NSAttributedString(string: "\(arc4random_uniform(100)) \nvideos",
+        let videos = NSAttributedString(string: "\(randomVideos) \nvideos",
             attributes: [NSForegroundColorAttributeName : color, NSParagraphStyleAttributeName:paragraphStyle])
         videosButton.setAttributedTitle(videos, for: .normal)
     }
